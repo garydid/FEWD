@@ -1,0 +1,138 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #121212;
+     font-size: 20px;
+     line-height: 1.4;
+     font-family: 'Lato', Helvetica, Arial, sans-serif;
+     font-weight: 300;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+body {
+	width: 100%;
+  height:100%;
+	margin: 0;
+  padding: 0;
+}
+
+#container{
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 80px;
+
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 a {
+  font-size: 40px;
+  color: #ff0000;
+}
+
+h2 a{
+  font-size: 35px;
+  color: #000000;
+}
+
+
+nav a{
+  font-size: 25px;
+  color: #ccc;
+  text-decoration: underline;
+  border: 0 1px 0 0;
+}
+
+h3{
+  font-size: 40px;
+  color: #ccc;
+  margin-top: 30px;
+}
+
+h4 a{
+  font-size: 20px;
+  color: #ff0000;
+  font-weight: 400;
+  float: right;
+
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+.content{
+  margin-top: 20px;
+}
+
+.cap{
+  float: left;
+  font-size: 100px;
+  margin-top: -30px;
+  margin-right: 20px;
+  color: #ccc;
+  }
+
+.title{
+  float: left;
+}
+
+.slogan{
+  margin: 0px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 220px;
+}
+
+nav{
+  clear: both;
+}
+
+.button{
+  display: block;
+  width: 180px;
+  height: 60px;
+  background-color: black;
+  float: left;
+  border-right: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 10px;
+}

@@ -1,0 +1,61 @@
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+header {
+  position: relative;
+  padding: 40px;
+  background: #00FF00;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+
+section{
+  position: relative;
+  padding: 40px;
+  background: #63DCEF;
+  border-bottom: 1px solid #DCDCDC;
+  float: right;
+  width: 80%;
+}
+
+section h4 {
+  position: absolute;
+  top: 2em;
+  right: 40px;
+}
+
+.section-content{
+  width: 70%;
+  float: left;
+}
+
+.section-aside{
+  margin-top: 80px;
+  padding-left: 40px;
+  width: 30%;
+  float: right;
+}
+
+aside {
+  position: relative;
+  padding: 40px;
+  background: #EF63DC;
+  float: left;
+  width: 20%;
+}
+
+footer {
+  position: relative;
+  padding: 40px;
+  background: #EF63DC;
+  clear: both;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
