@@ -183,13 +183,6 @@ article {
   border-bottom: 1px solid #ccc;
 }
 
-.posts {
-  list-style-image: url('images/sqpurple.gif');
-  list-style: inherit;
-  color: red;
-  padding-left: 50px;
-}
-
 .popular{
   padding-top: 30px;
 }
@@ -220,4 +213,11 @@ footer{
   clear: both;
   color: #ccc;
   padding-top: 30px
+}
+
+
+.posts {
+  color: red;
+  list-style-image: url('../images/circle.jpg');
+  padding-left: 40px;
 }

@@ -1,1 +1,2 @@
-Newest version of the resume is in week 3/resume/
+Fashion Blog:
+  week 3/fashion_blog/
