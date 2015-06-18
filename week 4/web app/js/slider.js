@@ -9,11 +9,7 @@ Element.prototype.Slider = function(){
   var leftButton = document.createElement('div');
   var rightButton = document.createElement('div');
 
-
-  var init = function() {
-
-    wrapper.style.width = slides.length * width + 'px';
-    wrapper.style.height = '100%';
+  this.createButtons = function() {
 
     leftButton.classList.add('left');
     rightButton.classList.add('right');
@@ -21,20 +17,43 @@ Element.prototype.Slider = function(){
     slider.appendChild(leftButton);
     slider.appendChild(rightButton);
 
+  };
+
+  this.resize = function() {
+
+    width = window.innerWidth;
+
+    wrapper.style.width = slides.length * width + 'px';
+    wrapper.style.height = '100%';
+
+  };
+
+
+  var init = function() {
+
+
     for(var i=0; i<slides.length; i++) {
       slides[i].style.width = width + 'px';
 
     }
 
     leftButton.addEventListener('mousedown',function(){
-        wrapper.style.marginLeft = width * position * -1 + 'px';
-        position = position + 1;
+
+      if(position > (width * (slides.length - 1)) * -1){
+        position = position - width;
+        wrapper.style.marginLeft = position + 'px';
+      }
+
     });
 
 
     rightButton.addEventListener('mousedown',function(){
-      position = position - 1;
-      wrapper.style.marginLeft = width * position * -1+'px';
+
+      if(position < 0) {
+      position = position + width;
+      wrapper.style.marginLeft = width +'px';
+      }
+
 
     });
 
