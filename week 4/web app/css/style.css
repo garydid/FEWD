@@ -48,7 +48,7 @@ Developer @GA in NYC
 
 #navContainer:active{
   width: 300px;
-  -webkit-transition: width 1.2s; /* Safari */
+  -webkit-transition: all 1.2s; /* Safari */
   transition: width 1.2s;
 
 }
