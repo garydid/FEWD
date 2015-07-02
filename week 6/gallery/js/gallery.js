@@ -39,7 +39,7 @@ Element.prototype.Gallery = function(){
       // add logic for each photo in here
 
       photos.forEach(function(photo,index){
-
+          console.log(photo);
 
           var li = document.createElement('li');
 

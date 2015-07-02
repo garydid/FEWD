@@ -1,6 +1,8 @@
 Element.prototype.Nav = function(){
 
   var nav = this,
+      navItems = nav.children[0].children,
+      section = document.getElementsByTagName('section'),
       btn = document.createElement('div'),
       container = document.getElementById('container');
 
@@ -23,9 +25,45 @@ Element.prototype.Nav = function(){
 
   };
 
+  //hide all the section
+  this.hideSection = function(){
+
+    for(var i=0; i<section.length; i++) {
+      section[i].style.opacity = '0';
+      section[i].style.zIndex = '0';
+      section[i].style.display = 'none';
+    }
+
+  };
+
+
+
+  //show a section
+  this.showSection =function(id){
+    this.hideSection();
+    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).style.opacity = '1.0';
+    document.getElementById(id).style.zIndex = '50';
+};
+
+
+
   this.init = function(){
 
     nav.createButton();
+
+    //loop through all li and add eventlistener
+    for(var i=0; i<navItems.length; i++) {
+      navItems[i].addEventListener('click', function(e){
+
+        var id = e.target.dataset.section;
+        nav.showSection(id);
+        nav.toggleNav();
+
+
+    });
+
+  }
 
   };
 
