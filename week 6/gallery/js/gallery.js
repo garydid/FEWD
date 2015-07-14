@@ -35,6 +35,36 @@ Element.prototype.Gallery = function(){
 
   };
 
+  this.filter = function(query) {
+    for( var i=0; i<ul.children.length; i++){
+      var tags = ul.children[i].dataset.tags;
+      var arr = tags.split(',');
+      var matched = false;
+
+      arr.forEach(function(tag){
+        if(tag === query){
+          ul.children[i].style.display = 'block';
+          matched = true;
+        }
+
+      });
+
+      if (matched === false) {
+        ul.children[i].style.display = 'none';
+      }
+
+      if(query === 'all') {
+        ul.children[i].style.display = 'block';
+      }
+
+      //grab the tags;
+      //check if a tag is equal to the query
+      //if there is a match show the li
+      //if is isn't match, hide the li
+
+    };
+  };
+
   this.layoutPhotos = function(){
       // add logic for each photo in here
 
@@ -46,7 +76,10 @@ Element.prototype.Gallery = function(){
           li.style.backgroundImage = 'url("'+photo.image_url+'")';
           li.style.backgroundSize = 'cover';
 
-          li.innerHTML = '<div class="meta"><h5>'+
+          var description = photo.description;
+
+
+          li.innerHTML = '<div class="meta" desc="blah"><h5>'+
                 photo.name+
                 '</h5><h6>'+
                 photo.user.fullname+
@@ -54,6 +87,16 @@ Element.prototype.Gallery = function(){
                 photo.rating+'</div></div>'+
                 '</div>';
 
+          var tags = [];
+          photo.tags.forEach(function(tag){
+            tags.push(tag.toLowerCase());
+          });
+
+          //li.addEventLister('click',gallery.singlePhoto);
+
+          ul.appendChild(li);
+
+          li.dataset.tags = tags;
           li.dataset.description = photo.description;
 
           li.addEventListener('click',gallery.singlePhoto);

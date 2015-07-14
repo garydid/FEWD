@@ -1,0 +1,83 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     background: green;
+}
+
+#container {
+      margin: 40px auto;
+      width: 1080px;
+      height: 600px;
+      perspective: 800px;
+
+}
+
+
+#title {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
+
+
+.card{
+  margin: 20px;
+  float: left;
+  background-size: 140px 196px;
+  width: 140px;
+  height: 196px;
+  border-radius: 15px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+
+.front {
+    position: absolute;
+    background-color: white;
+    width: 140px;
+    height: 196px;
+    border-radius: 15px;
+
+}
+
+
+.back {
+  position: absolute;
+  width: 140px;
+  height: 196px;
+  background-size: 140px 196px;
+  background-image: url(../img/bicycle-back.jpg);
+  border-radius: 15px;
+
+}
+
+.spades{
+  background-image: url(../img/french-suits.svg);
+  width: 100px;
+  height: 100px;
+  margin: 40px 30px;
+
+}

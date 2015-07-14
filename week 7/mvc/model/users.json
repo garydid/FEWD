@@ -1,0 +1,33 @@
+{
+  "users":
+    [{
+      "name":"Gary",
+      "age":"33",
+      "accupation":"Designer"
+    },
+    {
+      "name" : "Sally",
+      "age" : "25",
+      "accupation" : "Copywriter"
+    },
+    {
+      "name" : "Matt",
+      "age" : "40",
+      "accupation" : "Designer"
+    },
+    {
+      "name" : "Maria",
+      "age" : "30",
+      "accupation" : "Product Manager"
+    },
+    {
+      "name" : "Paul",
+      "age" : "36",
+      "accupation" : "Producer"
+    },
+    {
+      "name" : "Wendy",
+      "age" : "43",
+      "accupation" : "Account Manager"
+    }]
+}

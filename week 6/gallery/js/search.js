@@ -1,25 +1,30 @@
 Element.prototype.Search = function(term){
   var gallery = document.getElementById('gallery');
+  var search = this;
+  var input = this.children[0];
   //when the user focuses on the input, clear its contents
 
-  var input = this.children[0];
+  this.init = function(){
+    input.addEventListener('focus',function(){
+      this.value ='';
+    });
+    input.addEventListener('keyup',function(ev){
 
-  input.addEventListener('keyup',function(e){
+      if(ev.keyCode===13){
 
-    if(e.keyCode===13){
+        var query = input.value;
+        gallery.filter(query);
 
-      console.log('enter');
-    };
-
-  });
+      }
 
 
-  var matches = function(){
+    });
+
     //if the
-  }
+  };
   //tag name li, get elements
 
-
+ this.init();
   //after the user presses 'Enter/Return' , filter the gallery <li> using tags
 
 
